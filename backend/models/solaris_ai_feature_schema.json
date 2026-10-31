@@ -1,0 +1,315 @@
+{
+  "schema_version": "1.0",
+  "feature_count": 38,
+  "feature_order": "exact list order",
+  "forecast_horizon": "24 hours",
+  "target": "M/X-class flare occurrence in the labeled 24-hour forecast window",
+  "features": [
+    {
+      "index": 0,
+      "name": "xrsa_log_mean",
+      "dtype": "numeric",
+      "unit": "statistics of log-scaled GOES XRS flux; underlying flux input W m^-2; reproduce V5 transform exactly",
+      "window": "completed prior-hour GOES bin",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 1,
+      "name": "xrsa_log_max",
+      "dtype": "numeric",
+      "unit": "statistics of log-scaled GOES XRS flux; underlying flux input W m^-2; reproduce V5 transform exactly",
+      "window": "completed prior-hour GOES bin",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 2,
+      "name": "xrsa_log_std",
+      "dtype": "numeric",
+      "unit": "statistics of log-scaled GOES XRS flux; underlying flux input W m^-2; reproduce V5 transform exactly",
+      "window": "completed prior-hour GOES bin",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 3,
+      "name": "xrsa_coverage",
+      "dtype": "numeric",
+      "unit": "fraction [0,1]",
+      "window": "completed prior-hour GOES bin",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 4,
+      "name": "xrsb_log_mean",
+      "dtype": "numeric",
+      "unit": "statistics of log-scaled GOES XRS flux; underlying flux input W m^-2; reproduce V5 transform exactly",
+      "window": "completed prior-hour GOES bin",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 5,
+      "name": "xrsb_log_max",
+      "dtype": "numeric",
+      "unit": "statistics of log-scaled GOES XRS flux; underlying flux input W m^-2; reproduce V5 transform exactly",
+      "window": "completed prior-hour GOES bin",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 6,
+      "name": "xrsb_log_std",
+      "dtype": "numeric",
+      "unit": "statistics of log-scaled GOES XRS flux; underlying flux input W m^-2; reproduce V5 transform exactly",
+      "window": "completed prior-hour GOES bin",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 7,
+      "name": "xrsb_coverage",
+      "dtype": "numeric",
+      "unit": "fraction [0,1]",
+      "window": "completed prior-hour GOES bin",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 8,
+      "name": "xrsa_log_mean_roll6h_mean",
+      "dtype": "numeric",
+      "unit": "statistics of log-scaled GOES XRS flux; underlying flux input W m^-2; reproduce V5 transform exactly",
+      "window": "trailing 6 completed hours",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 9,
+      "name": "xrsa_log_mean_roll6h_max",
+      "dtype": "numeric",
+      "unit": "statistics of log-scaled GOES XRS flux; underlying flux input W m^-2; reproduce V5 transform exactly",
+      "window": "trailing 6 completed hours",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 10,
+      "name": "xrsa_log_max_roll6h_mean",
+      "dtype": "numeric",
+      "unit": "statistics of log-scaled GOES XRS flux; underlying flux input W m^-2; reproduce V5 transform exactly",
+      "window": "trailing 6 completed hours",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 11,
+      "name": "xrsa_log_max_roll6h_max",
+      "dtype": "numeric",
+      "unit": "statistics of log-scaled GOES XRS flux; underlying flux input W m^-2; reproduce V5 transform exactly",
+      "window": "trailing 6 completed hours",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 12,
+      "name": "xrsb_log_mean_roll6h_mean",
+      "dtype": "numeric",
+      "unit": "statistics of log-scaled GOES XRS flux; underlying flux input W m^-2; reproduce V5 transform exactly",
+      "window": "trailing 6 completed hours",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 13,
+      "name": "xrsb_log_mean_roll6h_max",
+      "dtype": "numeric",
+      "unit": "statistics of log-scaled GOES XRS flux; underlying flux input W m^-2; reproduce V5 transform exactly",
+      "window": "trailing 6 completed hours",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 14,
+      "name": "xrsb_log_max_roll6h_mean",
+      "dtype": "numeric",
+      "unit": "statistics of log-scaled GOES XRS flux; underlying flux input W m^-2; reproduce V5 transform exactly",
+      "window": "trailing 6 completed hours",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 15,
+      "name": "xrsb_log_max_roll6h_max",
+      "dtype": "numeric",
+      "unit": "statistics of log-scaled GOES XRS flux; underlying flux input W m^-2; reproduce V5 transform exactly",
+      "window": "trailing 6 completed hours",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 16,
+      "name": "xrsa_log_mean_roll24h_mean",
+      "dtype": "numeric",
+      "unit": "statistics of log-scaled GOES XRS flux; underlying flux input W m^-2; reproduce V5 transform exactly",
+      "window": "trailing 24 completed hours",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 17,
+      "name": "xrsa_log_mean_roll24h_max",
+      "dtype": "numeric",
+      "unit": "statistics of log-scaled GOES XRS flux; underlying flux input W m^-2; reproduce V5 transform exactly",
+      "window": "trailing 24 completed hours",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 18,
+      "name": "xrsa_log_max_roll24h_mean",
+      "dtype": "numeric",
+      "unit": "statistics of log-scaled GOES XRS flux; underlying flux input W m^-2; reproduce V5 transform exactly",
+      "window": "trailing 24 completed hours",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 19,
+      "name": "xrsa_log_max_roll24h_max",
+      "dtype": "numeric",
+      "unit": "statistics of log-scaled GOES XRS flux; underlying flux input W m^-2; reproduce V5 transform exactly",
+      "window": "trailing 24 completed hours",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 20,
+      "name": "xrsb_log_mean_roll24h_mean",
+      "dtype": "numeric",
+      "unit": "statistics of log-scaled GOES XRS flux; underlying flux input W m^-2; reproduce V5 transform exactly",
+      "window": "trailing 24 completed hours",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 21,
+      "name": "xrsb_log_mean_roll24h_max",
+      "dtype": "numeric",
+      "unit": "statistics of log-scaled GOES XRS flux; underlying flux input W m^-2; reproduce V5 transform exactly",
+      "window": "trailing 24 completed hours",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 22,
+      "name": "xrsb_log_max_roll24h_mean",
+      "dtype": "numeric",
+      "unit": "statistics of log-scaled GOES XRS flux; underlying flux input W m^-2; reproduce V5 transform exactly",
+      "window": "trailing 24 completed hours",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 23,
+      "name": "xrsb_log_max_roll24h_max",
+      "dtype": "numeric",
+      "unit": "statistics of log-scaled GOES XRS flux; underlying flux input W m^-2; reproduce V5 transform exactly",
+      "window": "trailing 24 completed hours",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 24,
+      "name": "xrsa_log_mean_roll72h_mean",
+      "dtype": "numeric",
+      "unit": "statistics of log-scaled GOES XRS flux; underlying flux input W m^-2; reproduce V5 transform exactly",
+      "window": "trailing 72 completed hours",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 25,
+      "name": "xrsa_log_mean_roll72h_max",
+      "dtype": "numeric",
+      "unit": "statistics of log-scaled GOES XRS flux; underlying flux input W m^-2; reproduce V5 transform exactly",
+      "window": "trailing 72 completed hours",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 26,
+      "name": "xrsa_log_max_roll72h_mean",
+      "dtype": "numeric",
+      "unit": "statistics of log-scaled GOES XRS flux; underlying flux input W m^-2; reproduce V5 transform exactly",
+      "window": "trailing 72 completed hours",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 27,
+      "name": "xrsa_log_max_roll72h_max",
+      "dtype": "numeric",
+      "unit": "statistics of log-scaled GOES XRS flux; underlying flux input W m^-2; reproduce V5 transform exactly",
+      "window": "trailing 72 completed hours",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 28,
+      "name": "xrsb_log_mean_roll72h_mean",
+      "dtype": "numeric",
+      "unit": "statistics of log-scaled GOES XRS flux; underlying flux input W m^-2; reproduce V5 transform exactly",
+      "window": "trailing 72 completed hours",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 29,
+      "name": "xrsb_log_mean_roll72h_max",
+      "dtype": "numeric",
+      "unit": "statistics of log-scaled GOES XRS flux; underlying flux input W m^-2; reproduce V5 transform exactly",
+      "window": "trailing 72 completed hours",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 30,
+      "name": "xrsb_log_max_roll72h_mean",
+      "dtype": "numeric",
+      "unit": "statistics of log-scaled GOES XRS flux; underlying flux input W m^-2; reproduce V5 transform exactly",
+      "window": "trailing 72 completed hours",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 31,
+      "name": "xrsb_log_max_roll72h_max",
+      "dtype": "numeric",
+      "unit": "statistics of log-scaled GOES XRS flux; underlying flux input W m^-2; reproduce V5 transform exactly",
+      "window": "trailing 72 completed hours",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 32,
+      "name": "xrsa_coverage_roll24h_mean",
+      "dtype": "numeric",
+      "unit": "fraction [0,1]",
+      "window": "trailing 24 completed hours",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 33,
+      "name": "xrsb_coverage_roll24h_mean",
+      "dtype": "numeric",
+      "unit": "fraction [0,1]",
+      "window": "trailing 24 completed hours",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 34,
+      "name": "hour_sin",
+      "dtype": "numeric",
+      "unit": "dimensionless sine/cosine",
+      "window": "forecast timestamp calendar encoding",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 35,
+      "name": "hour_cos",
+      "dtype": "numeric",
+      "unit": "dimensionless sine/cosine",
+      "window": "forecast timestamp calendar encoding",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 36,
+      "name": "annual_sin",
+      "dtype": "numeric",
+      "unit": "dimensionless sine/cosine",
+      "window": "forecast timestamp calendar encoding",
+      "missing_values_allowed": true
+    },
+    {
+      "index": 37,
+      "name": "annual_cos",
+      "dtype": "numeric",
+      "unit": "dimensionless sine/cosine",
+      "window": "forecast timestamp calendar encoding",
+      "missing_values_allowed": true
+    }
+  ],
+  "time_rule": "Only completed prior-hour science-quality GOES XRS observations and trailing history; time encodings use forecast timestamp.",
+  "important": "Apply the exact Version 5 NOAA quality filtering, UTC binning, log transform and feature construction. Do not pass labels, flare classes, cumulative metadata, or future observations."
+}

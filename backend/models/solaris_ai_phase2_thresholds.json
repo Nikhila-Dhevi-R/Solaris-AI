@@ -1,0 +1,37 @@
+{
+  "target": "M/X-class flare occurrence in the 24-hour forecast window",
+  "calibrator_fit_period": "2016 (24-hour purge)",
+  "threshold_selection_period": "2017 (24-hour purge)",
+  "default_warning_threshold": 0.20594365951619512,
+  "default_threshold_validation_metrics": {
+    "threshold": 0.20594365951619512,
+    "Recall": 0.6143250688705234,
+    "TSS": 0.5916129780221602,
+    "Precision": 0.5674300254452926,
+    "FPR": 0.022712090848363342,
+    "False_alarms": 170.0,
+    "TP": 223.0,
+    "utility": 0.595861223846132
+  },
+  "risk_cutoffs": {
+    "low_moderate": 0.02756797277329327,
+    "moderate_high": 0.36999108243721823
+  },
+  "risk_levels": {
+    "Low": {
+      "range": "p < 0.02756797",
+      "meaning": "below the 2017 threshold maintaining at least 90% recall"
+    },
+    "Moderate": {
+      "range": "0.02756797 <= p < 0.36999108",
+      "meaning": "intermediate validation risk"
+    },
+    "High": {
+      "range": "p >= 0.36999108",
+      "meaning": "at least 50% validation recall at the upper cutoff"
+    }
+  },
+  "selection_rule": "2017 threshold maximized 0.40*recall + 0.40*TSS + 0.20*precision; Low/Moderate cutoff is max threshold with recall >=0.90; Moderate/High is max threshold with recall >=0.50.",
+  "event_evaluation": "No event onset/peak timestamps are present in the label table; hourly-window scores and 24h proximity clusters are not distinct flare-event scores.",
+  "test_policy": "2020-2024 test results were previously observed and are descriptive only; never used for tuning, calibration, or threshold selection."
+}

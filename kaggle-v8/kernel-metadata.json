@@ -1,0 +1,14 @@
+{
+  "id": "coolnikhila/solaris-ai-v8",
+  "title": "Solaris AI V8",
+  "code_file": "solaris-ai-v8.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": true,
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}

@@ -1,0 +1,4 @@
+Risk_level,Rows,Positive_windows,Observed_rate
+Low,3846,36,0.0093603744149766
+Moderate,3740,136,0.03636363636363636
+High,262,191,0.7290076335877863
