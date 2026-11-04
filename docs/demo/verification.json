@@ -1,0 +1,11 @@
+{
+  "duration_seconds": 9.77,
+  "resolution": "1920x1080",
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "bytes": 2255423,
+  "sha256": "602e6bf019fee9c3b055f6b08b57932b5dd7a66e09fcd750fb0ba7a3a706a0f8",
+  "source": "User-supplied Solaris AI vdo.mp4",
+  "copied_without_reencoding": true,
+  "decoded_frame_review": true
+}
