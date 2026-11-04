@@ -8,9 +8,9 @@ Built for students, researchers and curious explorers, it combines **live monito
 
 ## Watch the demo
 
-[![Solaris AI — watch the 10-second demo](docs/demo/solaris-ai-demo.jpg)](docs/demo/solaris-ai-demo.mp4)
+![Solaris AI — animated demo preview](docs/demo/solaris-ai-demo.gif)
 
-**[▶ Watch / download the 10-second MP4](docs/demo/solaris-ai-demo.mp4)** · 1080p · Actual application screens
+**[⬇ Download the 10-second MP4](https://github.com/Nikhila-Dhevi-R/Solaris-AI/raw/refs/heads/main/docs/demo/solaris-ai-demo.mp4)** · 1080p · Actual application screens
 
 The video is a recorded snapshot from 4 November 2026. Displayed measurements and forecasts were captured from the running application; they are not current readings when you replay the video. The animated Sun is an artistic illustration. This user-selected edit is approximately 10 seconds long. The original video was made locally with [brag](https://github.com/latent-spaces/brag) and Hyperframes. [Media credits](docs/demo/CREDITS.md).
 
