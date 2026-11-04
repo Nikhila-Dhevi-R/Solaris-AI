@@ -1,0 +1,23 @@
+.theme-switch{display:flex;border:1px solid #66503c;border-radius:9px;padding:3px;background:#131a26}.theme-switch button{display:flex;align-items:center;gap:5px;border:0;border-radius:6px;background:transparent;color:#acb8c9;padding:7px 9px;font-size:11px}.theme-switch button[aria-pressed=true]{background:#493024;color:#ffce9c}.theme-switch button:focus-visible{outline:2px solid #e78b31;outline-offset:2px}
+:root[data-theme=light]{color-scheme:light;color:#253248;--solar-glass-border:#d9cabb;--solar-gold:#934300;--solar-amber:#9a480c}
+[data-theme=light] body,[data-theme=light] .app{background:radial-gradient(ellipse at 85% 0%,#ffe3c2,transparent 45%),#f6f3ed;color:#253248}
+[data-theme=light] .sidebar,[data-theme=light] header{background:#fffcf4e6;border-color:#d9d1c6}
+[data-theme=light] :is(.panel,.metric,.guide-live-section,.guide-scale-section,.model-threshold-card,.glossary-section,.mission-impact article){background:linear-gradient(135deg,#ffffffed,#fff9efdd);border-color:#d9cabb;box-shadow:0 10px 30px #5540250c}
+[data-theme=light] :is(.mission-hero,.hero,.guide-hero){background:radial-gradient(ellipse at 80% 45%,#ffb56677,transparent 55%),linear-gradient(120deg,#fffdf8,#ffedd7);border-color:#e7c5a2;box-shadow:0 15px 40px #7e4a2110}
+[data-theme=light] :is(p,small,.breadcrumb,.nav-label,.eyebrow,.muted,.metric-top,.chart-footer,.empty,.footnote,footer,.guide-section-heading>div>p,.live-measurement-top span,.live-measurement-bottom,.scale-caveat,.model-context,.scale-level-content>p,.guide-callout p,.service-card>small,.mission-copy small,.hero-meta,.live-pill,.orbit-label,.burning-sun span){color:#546174}
+[data-theme=light] :is(h1,h2,h3,h4,h5,strong,.live-measurement>strong,.model-live-probability strong,.v6-threshold-grid strong,.scale-level-heading h5,.alert-title){color:#243146}
+[data-theme=light] :is(.mission-copy em,.guide-hero h2 em,.hero h2 em,.eyebrow,.section-kicker,.guide-kicker,.guide-back,.guide-sources a,.source-links a,.link,.mode,.mini-badge,.current-level-tag,.scale-level-meter span,.scale-level-heading b,.v6-threshold-grid article>span,.guide-callout strong){color:#91430d}
+[data-theme=light] :is(.model-subnav,.segmented,.theme-switch,.glossary-search,.model-live-probability,.impact-card,.scale-tabs button,.v6-threshold-grid article,.scale-level,.glossary-card,.live-measurement,.info-grid>div){background:#fffaf3;border-color:#dacdbc}
+[data-theme=light] :is(button,input,select){color:#374559}
+[data-theme=light] :is(.refresh,.nav-toggle,.guide-back){background:#fff8ee;border-color:#cdb99f;color:#843e12}
+[data-theme=light] :is(nav button.active,nav button:hover,.theme-switch button[aria-pressed=true],.model-subnav button.selected,.scale-tabs button.selected,.segmented button.selected){background:#ffe1bd;color:#79370c}
+[data-theme=light] :is(.model-subnav button,.scale-tabs button){color:#596576}
+[data-theme=light] .notice,[data-theme=light] .guide-callout{background:#fff0d8;border-color:#e5c493;color:#834713}
+[data-theme=light] .notice p{color:#834713}
+[data-theme=light] .service-card{--accent:#a44a10;background:radial-gradient(ellipse at top right,var(--tint),transparent 80%),#fffdfa;box-shadow:0 12px 30px #53452f12}
+[data-theme=light] .service-gps{--accent:#136b60}[data-theme=light] .service-card.service-grid{--accent:#876500}[data-theme=light] .service-cables{--accent:#6549a3}
+[data-theme=light] .service-reading,[data-theme=light] .service-top,[data-theme=light] .service-assessment,[data-theme=light] .service-card summary{color:var(--accent)}
+[data-theme=light] .mission-actions button{background:#fff6e9;color:#853b0c}[data-theme=light] .mission-actions button:first-child{background:#a84e16;color:white}
+[data-theme=light] .forecast-ring{border-color:#e0d6ca;border-top-color:#b75d25}[data-theme=light] .forecast-ring :is(small,span){color:#596576}
+[data-theme=light] .alert-row pre{color:#374559}[data-theme=light] .glossary-search input{color:#263248}[data-theme=light] footer b{color:#637086}
+@media(max-width:700px){header{height:auto;min-height:64px;flex-wrap:wrap;gap:10px;padding-top:12px;padding-bottom:12px}.head-actions{gap:8px;flex-wrap:wrap}.head-actions .mode{display:none}.theme-switch button{padding:7px}.breadcrumb{font-size:9px}}

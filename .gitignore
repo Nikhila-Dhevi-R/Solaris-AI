@@ -4,3 +4,9 @@ frontend/dist/
 __pycache__/
 .pytest_cache/
 .env
+
+# Archived experiments are not part of this V6 application.
+solaris-ai-v7.ipynb
+solaris-ai-v8.ipynb
+kaggle-v8/
+*.log
