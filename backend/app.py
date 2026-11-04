@@ -14,6 +14,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from model_service import model_details, predict_features
 from realtime import operational_features
+from impacts import read_observation, evaluate_impacts, evaluate_services, parse_orbit
 
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger('solaris')
@@ -140,6 +141,31 @@ async def alerts():
     data = sorted(data, key=lambda r:r.get('issue_datetime',''), reverse=True)
     return {'source':'NOAA SWPC','items':data[:15], 'note':'Recent issued products; not necessarily active alerts.'}
 
+async def get_orbit(catalog_id):
+    key=f'orbit:{catalog_id}'
+    now=time.monotonic()
+    if key in _cache and now-_cache[key][0] < 3600: return _cache[key][1]
+    async with httpx.AsyncClient(timeout=15,follow_redirects=True) as client:
+        response=await client.get('https://celestrak.org/NORAD/elements/gp.php',params={'CATNR':catalog_id,'FORMAT':'json'})
+        response.raise_for_status()
+        data=response.json()
+        if not isinstance(data,list) or len(data)!=1 or int(data[0]['NORAD_CAT_ID'])!=catalog_id: raise ValueError('No matching orbital elements')
+        orbit=parse_orbit(data[0],datetime.now(timezone.utc))
+        _cache[key]=(now,orbit)
+        return orbit
+
 @app.get('/api/satellites')
-def satellites():
-    return {'status':'unavailable','items':[],'reason':'Orbital elements and satellite-specific impact models are not configured. Spacecraft impacts cannot be inferred from X-rays alone.','recommendation':'Consult current NOAA alerts and mission-specific procedures; do not use this display for autonomous decisions.'}
+async def satellites():
+    tasks=[get_noaa('/json/goes/primary/xrays-6-hour.json'),get_noaa('/products/noaa-planetary-k-index.json',300),get_noaa('/json/goes/primary/integral-protons-6-hour.json',300),*(get_orbit(i) for i in (25544,20580,41866))]
+    results=await asyncio.gather(*tasks,return_exceptions=True)
+    def rows(index):
+        if isinstance(results[index],Exception):
+            log.warning('Satellite monitoring source %d unavailable: %s',index,results[index]); return []
+        return results[index]
+    readings={'xray':read_observation(rows(0),'flux',energy='0.1-0.8nm'),'kp':read_observation(rows(1),'Kp'),'protons':read_observation(rows(2),'flux',energy='>=10 MeV')}
+    orbits=[r for r in results[3:] if not isinstance(r,Exception)]
+    cards=evaluate_impacts(readings,datetime.now(timezone.utc))
+    return {'status':'available' if any(c['status']!='Unavailable' for c in cards) else 'unavailable','items':orbits,'services':evaluate_services(readings,datetime.now(timezone.utc)),'impacts':cards,'measurements':readings,
+       'orbit_source':'CelesTrak current general perturbation elements','environment_source':'NOAA SWPC real-time observations',
+       'disclaimer':'Environmental indicators describe possible effects, not satellite-specific failure predictions. Conditions and sensitivity vary with orbit, location, and spacecraft design.',
+       'recommendation':'Monitor current NOAA products and follow mission-specific procedures. Informational only; no automated commands.'}
