@@ -1,4 +1,4 @@
-# Solaris AI ☀️
+#                                     Solaris AI 
 
 ### Solar intelligence. Earthly impact.
 
